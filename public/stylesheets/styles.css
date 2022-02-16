@@ -1,0 +1,54 @@
+/**********Home**********/
+.outBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.mainBox{
+    margin-top: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.mainBox .button1{
+    width: 200px;
+    height: 20px;
+}
+
+/**********Create**********/
+
+.outCreate{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.mainCreate{
+    margin-top: 20px;
+}
+
+/**********List**********/
+.outList{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/**********update**********/
+.updatebox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.pic1{
+    height: 100px;
+    width: 100px;
+}

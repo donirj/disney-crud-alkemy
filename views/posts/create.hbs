@@ -1,0 +1,57 @@
+{{!-- views/posts/create.hbs --}}
+<h2>Create a post</h2>
+
+<form action="/posts/create" method="POST">
+
+    <label>Name</label>    
+    <input 
+        type="text"
+        name="name"
+    />
+   <br><br>   
+    <label>Age</label>    
+    <input 
+        type="number"
+        name="age"
+    />
+  <br><br> 
+    <label>Weigth</label>    
+    <input 
+        type="number"
+        name="weigth"
+    />
+  <br><br> 
+    <label>History</label>
+    <textarea 
+        type="text" 
+        name="history"
+    ></textarea>
+  <br><br> 
+    <label>Movies</label>
+    <textarea 
+        type="text" 
+        name="movies"
+    ></textarea>
+  <br><br> 
+    <label>Url</label>
+    <textarea 
+        type="text" 
+        name="url"
+    ></textarea>
+
+    
+    <label for="author-select">
+        <select name="author">
+            <option disable selected value=""></option>
+            {{#each dbUsers }}
+                <option value="{{this._id}}">{{this.username}}</option>
+            {{/each}}
+        </select>
+
+
+    </label>
+
+    <button type="submit">Create post</button>
+
+
+</form>

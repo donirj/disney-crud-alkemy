@@ -1,0 +1,53 @@
+{{!-- views/posts/create.hbs --}}
+<div class="outCreate">
+    <div class="mainCreate">
+        <button >
+            <a  class="link s0" href="/">Back</a>
+        </button>
+
+        <h2>Create a character</h2>
+
+        <form action="/characters/create" method="POST">
+
+        <label>Name</label>    
+        <input 
+            type="text"
+            name="name"
+        />
+        <br><br>   
+        <label>Age</label>    
+        <input 
+            type="number"
+            name="age"
+        />
+        <br><br> 
+        <label>Weigth</label>    
+        <input 
+            type="number"
+            name="weigth"
+        />
+        <br><br> 
+        <label>History</label>
+        <textarea 
+            type="text" 
+            name="history"
+        ></textarea>
+        <br><br> 
+        <label>Movies</label>
+        <textarea 
+            type="text" 
+            name="movies"
+        ></textarea>
+        <br><br> 
+        <label>Url</label>
+        <input type="string" name="img" />
+        <br><br> 
+        <button href="/characters/list" type="submit">Create character</button>
+        </form>
+        <br> 
+        <button >
+            <a  class="link s0" href="/characters/list">See character list</a>
+        </button>
+        
+    </div>
+</div>

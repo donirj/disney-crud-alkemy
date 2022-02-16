@@ -1,0 +1,7 @@
+installs
+
+npm init --yes
+npm i mongoose hbs dotenv express
+npm run seed
+
+ruta formulario /posts/create

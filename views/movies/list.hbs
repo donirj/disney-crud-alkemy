@@ -1,0 +1,30 @@
+<button >
+    <a  class="link s0" href="/movies/create">Back</a>
+</button>
+<button >
+    <a  class="link s0" href="/">Home</a>
+</button>
+
+<div class="outList">
+    <div class="mainList">
+    <h1>Movie list</h1>
+
+{{#each movieList}}
+<div class="grid-container">
+    <div class="grid-item">    
+        <h2>{{title}}</h2>
+        <p>date: {{date}}</p>
+        <p>Rating: {{rate}}</p>
+         <img class="pic1" src={{img}} alt="fotografia">
+        <a class="ver1" href="/movies/{{id}}">Ver detalles</a>
+        <a class="ver1" href="/movies/{{id}}/edit">Editar producto</a>
+
+        <form action="/movies/{{id}}/delete" method="POST">
+        <button type="submit" class="submit">Borrar producto</button>
+        </form>
+    </div>    
+</div>
+
+
+
+{{/each}}
