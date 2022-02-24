@@ -1,0 +1,11 @@
+{{!-- views/users/profile.hbs --}}
+<h1>Tu perfil</h1>
+
+{{#if foundUser}}
+
+    Hola {{foundUser.username}}
+
+    {{else}}
+    <p>Aun no has iniciado sesion</p>
+
+{{/if}}

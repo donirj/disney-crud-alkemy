@@ -1,0 +1,30 @@
+<div>
+    <h2>Iniciar sesion</h2>
+
+    <form action="/auth/login" method="POST">
+        <h2>email</h2>
+        <input 
+            type="email" 
+            name="email" 
+            id=""
+            placeholder="email"
+        >
+
+        <h2>passwor</h2>
+        <input 
+            type="password" 
+            name="password" 
+            id=""
+            placeholder="password"
+        >
+
+        <button type="submit">
+            Iniciar sesión
+        </button>
+
+        {{#if errorMessage}}
+            <p style="color:red">{{errorMessage}}</p>
+        {{/if}}
+        
+    </form>
+</div>

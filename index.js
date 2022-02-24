@@ -18,12 +18,17 @@ app.use(express.static(__dirname + "/public"));
 // d. ACTIVAMOS CARPETA DE VISTAS
 app.set("view engine", "hbs");
 // e. ACTIVAR RECEPCIÓN DE DATOS EN FORMULARIOS
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }))
+//f. ACTIVAR GESTION DE SESIONES
+require("./config/session.config")(app)
+
 
 //3 ruteo
-app.use("/posts", require("./routes/post"));
 app.use("/characters", require("./routes/character"));
 app.use("/movies", require("./routes/movie"));
+app.use("/auth", require("./routes/auth"));
+app.use("/user", require("./routes/user"));
+
 
 app.get("/", (req, res) => {
   res.render("index");
