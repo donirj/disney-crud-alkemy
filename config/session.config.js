@@ -24,7 +24,7 @@ const generateSession = (app) => {
                 "production",
                 httpOnly: true,
                 //cuanto tiempo expira la cookie
-                maxAge: 60000
+                maxAge: 600000
             },
             store: MongoStore.create({
                 mongoUrl: process.env.MONGODB_URI

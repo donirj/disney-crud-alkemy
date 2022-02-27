@@ -75,17 +75,23 @@ exports.loginUserForm = async (req, res) => {
 
         //console.log(req)
         req.session.currentUser = foundUser
-        console.log(req.session.currentUser)
 
-        return res.render("users/profile", {
-            foundUser
-        })
-
+        return res.redirect("/user/profile")
 
     } catch (error) {
         //6. en caso de fallos realizamos manejo de errores
         console.log(error)
     }
 
-    res.send("listo")
+}
+
+exports.logoutUser = (req, res) => {
+    //ELIMINA LA COOKIE DEL NAVEGADOR
+    req.session.destroy((err) => {
+        if(err){
+            console.log(err)
+        }
+        res.redirect("/")
+    })
+
 }

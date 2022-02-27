@@ -22,6 +22,16 @@ app.use(express.urlencoded({ extended: true }))
 //f. ACTIVAR GESTION DE SESIONES
 require("./config/session.config")(app)
 
+//g. ESTABLECER REQ.SESSION EN LAYOUT.HBS, A TRAVÉS DEL
+//USO DE RES.LOCALS
+//Layout Middleware
+app.use((req, res, next) => {
+
+  res.locals.currentUser = req.session.currentUser
+
+  next()
+
+})
 
 //3 ruteo
 app.use("/characters", require("./routes/character"));
@@ -31,8 +41,12 @@ app.use("/user", require("./routes/user"));
 
 
 app.get("/", (req, res) => {
-  res.render("index");
+  res.redirect("/auth/login");
 });
+
+// app.get("index", (req, res) => {
+//   res.redirect("index");
+// });
 
 // 4. SERVIDOR
 app.listen(process.env.PORT, () => {
