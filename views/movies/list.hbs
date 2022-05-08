@@ -1,29 +1,31 @@
-<button >
-    <a  class="link s0" href="/movies/create">Back</a>
-</button>
-<button >
-    <a  class="link s0" href="/user/menu">Home</a>
-</button>
 
 <div class="outList">
     <div class="mainList">
+        <button class="button1">
+            <a  class="links" href="/movies/create">Back</a>
+        </button>
+        <button class="button1">
+            <a  class="links" href="/user/menu">Home</a>
+        </button>   
     <h1>Movie list</h1>
-
+    
 {{#each movieList}}
-<div class="grid-container">
+<div class="grid-group">
     <div class="grid-item">    
-        <h2>{{title}}</h2>
-        <p>date: {{date}}</p>
-        <p>Rating: {{rate}}</p>
-         <img class="pic1" src={{img}} alt="fotografia">
-        <a class="ver1" href="/movies/{{id}}">Ver detalles</a>
-        <a class="ver1" href="/movies/{{id}}/edit">Editar producto</a>
-
+        <img class="pic1" src={{img}} alt="fotografia">
+        <h2 class="titleName">{{title}}</h2>
+        {{!-- <div>
+            <p>date: {{date}}</p>
+            <p>Rating: {{rate}}</p>
+        </div> --}}
+        <button class="detailsButton"><a class="ver1" href="/movies/{{id}}">See details</a></button>
+        <button class="updateButton"><a class="ver1" href="/movies/{{id}}/edit">Update</a></button>
         <form action="/movies/{{id}}/delete" method="POST">
-        <button type="submit" class="submit">Borrar producto</button>
+        <button class="deleteButton" type="submit" class="submit">Delete</button>
         </form>
     </div>    
 </div>
+    <br>
 
 
 

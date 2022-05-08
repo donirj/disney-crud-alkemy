@@ -1,31 +1,38 @@
-<button >
-    <a  class="link s0" href="/characters/create">Back</a>
-</button>
-<button >
-    <a  class="link s0" href="/user/menu">Home</a>
-</button>
 
 <div class="outList">
     <div class="mainList">
+        <button class="button1">
+            <a class="links" href="/characters/create">Back</a>
+        </button>
+        <button class="button1">
+            <a class="links" href="/user/menu">Home</a>
+        </button>
     <h1>Character list</h1>
 
     {{#each characterList}}
-    <div class="grid-container">
+    <div class="grid-group"> 
         <div class="grid-item">    
-            <h2>{{name}}</h2>
-            <p>Age: {{age}}</p>
-            <p>Weigth: {{weigth}}</p>
-            <p>History: {{history}}</p>
-            <p>Movies: {{movies}}</p>
-            <img class="pic1" src={{img}} alt="fotografia">
-            <br> 
-            <button><a class="ver1" href="/characters/{{id}}">Character details</a></button>
-            <button><a class="ver1" href="/characters/{{id}}/edit">Update character</a></button>
-            <br> 
+            <img class="pic2" src={{img}} alt="fotografia">
+            <h2 class="titleName">{{name}}</h2>
+
+            {{!-- <div>
+                <p>Age: {{age}}</p>
+                <p>Weigth: {{weigth}}</p>
+            </div> --}}
+            {{!-- <div>
+                <p>History: {{history}}</p>
+                <p>Movies: {{movies}}</p>
+            </div> --}}
+    
+            <button class="detailsButton"><a href="/characters/{{id}}">See details</a></button>
+            <button class="updateButton"><a href="/characters/{{id}}/edit">Update</a></button>
             <form action="/characters/{{id}}/delete" method="POST">
-            <button type="submit" class="submit">Delete producto</button>
+            <button class="deleteButton" type="submit">Delete</button>
             </form>
-        </div>    
-    </div>
+
+        </div>
+    </div>    
+        <br>
+
     {{/each}}
 </div>

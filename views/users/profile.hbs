@@ -1,12 +1,16 @@
 {{!-- views/users/profile.hbs --}}
-<h1>Tu perfil</h1>
+<div class="outProfile">
+    <div class="profileBox">
+        <h1>Tu perfil</h1>
 
-{{#if foundUser}}
+        {{#if foundUser}}
 
-    Hola {{foundUser.username}}
+            Hola {{foundUser.username}}
 
-    {{else}}
-    
-    <p>Aun no has iniciado sesion</p>
+            {{else}}
+            
+            <p>Aun no has iniciado sesion</p>
 
-{{/if}}
+        {{/if}}
+    </div>
+</div>

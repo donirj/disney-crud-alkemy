@@ -1,33 +1,50 @@
 
 <div class="outCreate">
     <div class="mainCreate">
-    <button >
-        <a  class="link s0" href="/user/menu">Back</a>
+    <button class="button1" >
+        <a  class="links" href="/user/menu">Back</a>
     </button>
-
+    <br><br>
     <form action="create" method="POST" class="signup">
     
-        <div class="signup1">
-            <h2>Title</h2>
-            <input type="string" name="title" />
+        <div class="TwoInputBox">
+            <input 
+                class="input1" 
+                type="text" 
+                name="title"
+                placeholder="title" />
 
-            <h2>Date</h2>
-            <input type="number" name="date" />
-
-            <h2>Rating</h2>
-            <input type="number" name="rate" />
-            
-            <h2>Url Image</h2>
-            <input type="string" name="img" />
-
-            <button type="submit"  >
+            <input 
+                class="input1" 
+                type="number" 
+                name="date" 
+                placeholder="year"
+                />
+        </div>
+        <br><br>
+        <div class="TwoInputBox">
+            <input 
+                class="input1" 
+                type="number" 
+                name="rate" 
+                placeholder="rate"
+                />
+            <input 
+                class="input1" 
+                type="string" 
+                name="img" 
+                placeholder="rate"
+                />
+        </div>
+            <br><br>
+            <button class="button1" type="submit"  >
                 Create movie
             </button>
             <br><br>
-            <button >
-                <a  class="link s0" href="/movies/list">See movie list</a>
+            <button class="button1" >
+                <a class="links" href="/movies/list">See movie list</a>
             </button>
-        </div>
+
     </form>
     </div>
 </div>
